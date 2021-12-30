@@ -18,7 +18,7 @@ public class GoodsLinkedList {
         }
     }
 
-    void sua() {
+    public void sua() {
         Goods goods = new Goods();
 
         Scanner sc = new Scanner(System.in);
@@ -45,7 +45,7 @@ public class GoodsLinkedList {
 
     }
 
-    void xoaTheoMaHang() {
+    public void xoaTheoMaHang() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Nhap ma hang can xoa: ");
         int id = sc.nextInt();
@@ -79,7 +79,7 @@ public class GoodsLinkedList {
         return result;
     }
 
-    void timTheoMaHang() {
+    public void timTheoMaHang() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Nhap ma hang can tim: ");
         int id = sc.nextInt();
@@ -103,7 +103,7 @@ public class GoodsLinkedList {
         return result;
     }
 
-    void timTheoGiaHang() {
+    public void timTheoGiaHang() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Nhap gia hang can tim: ");
         double gia = sc.nextDouble();
@@ -168,19 +168,19 @@ public class GoodsLinkedList {
 
 }
 
-void thongKe(){
-    Node current = head;
-    int tong1 = 0;
-    int tong2 = 0, tong3 = 0, tong4 = 0;
-    String loai1 = "banh keo";
-    String loai2 = "thoi trang";
-    String loai3 = "thuc pham";
+    public void thongKe(){
+        Node current = head;
+        int tong1 = 0;
+        int tong2 = 0, tong3 = 0, tong4 = 0;
+        String loai1 = "banh keo";
+        String loai2 = "thoi trang";
+        String loai3 = "thuc pham";
 
-    if (head == null) {
-        System.out.println("Danh sach rong.");
-    } else {
-        while (current != null) {
-            tong1 += current.Goods.SoLuongTonKho; 
+        if (head == null) {
+            System.out.println("Danh sach rong.");
+        } else {
+            while (current != null) {
+                tong1 += current.Goods.SoLuongTonKho; 
             
             if (current.Goods.LoaiHang == loai1) {
                 tong2 += current.Goods.SoLuongTonKho;
