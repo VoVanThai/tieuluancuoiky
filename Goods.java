@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class Goods {
-    String LoaiHang;
     int MaHang;
+    String LoaiHang;
     String TenHang;
     double GiaHang;
     int SoLuongTonKho;
@@ -11,7 +11,7 @@ public class Goods {
     public Goods() {
     }
 
-    public Goods(String lh, int mh, String th, double gh, int sltk, String nn){
+    public Goods(int mh, String lh, String th, double gh, int sltk, String nn) {
         LoaiHang = lh;
         MaHang = mh;
         TenHang = th;
@@ -22,30 +22,22 @@ public class Goods {
 
     Scanner sc = new Scanner(System.in);
 
-    void nhapThongTin(){
-        System.out.println("Nhập loại hàng hóa:");
-        LoaiHang = sc.nextLine();
-        System.out.println("Nhập mã hàng hóa:");
+    void nhapThongTin() {
+        System.out.println("Nhap ma hang hoa:");
         MaHang = sc.nextInt();
-        System.out.println("Nhập tên hàng hóa:");
+        System.out.println("Nhap loai hang hoa:");
+        LoaiHang = sc.nextLine();
+        System.out.println("Nhap ten hang hoa:");
         TenHang = sc.nextLine();
-        System.out.println("Nhập giá hàng hóa:");
+        System.out.println("Nhap gia hang hoa:");
         GiaHang = sc.nextDouble();
-        System.out.println("Nhập số lượng tồn kho:");
+        System.out.println("Nhap so luong ton kho:");
         SoLuongTonKho = sc.nextInt();
-        System.out.println("Ngày nhập kho:");
+        System.out.println("Ngay nhap kho:");
         NgayNhap = sc.next();
     }
 
-    void inThongTin(){
-        System.out.println("---------------");
-        System.out.println("Loại: " +LoaiHang);
-        System.out.println("Mã: " +MaHang);
-        System.out.println("Tên: " +TenHang);
-        System.out.println("Giá: " +GiaHang);
-        System.out.println("Số lượng tồn kho: " +SoLuongTonKho);
-        System.out.println("Ngày nhập: " +NgayNhap);
+    void inThongTin() {
+        System.out.printf("%d %15s %15s %15f %15d %15s", MaHang, LoaiHang, TenHang, GiaHang, SoLuongTonKho, NgayNhap);
     }
-
 }
-

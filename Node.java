@@ -2,7 +2,7 @@ public class Node {
     Goods goods;
     Node next;
 
-    public Node(){
+    public Node() {
         goods = null;
         next = null;
     }
@@ -17,4 +17,3 @@ public class Node {
         next = node;
     }
 }
-
